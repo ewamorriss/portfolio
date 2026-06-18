@@ -16,12 +16,12 @@ export default function Home() {
       >
         <div>
           <p className="section__description">
-            <span>{`I’m a front-end developer and UI designer with over a decade of professional experience ranging from small, digital agencies to big software companies.`}</span>
+            <span>{`I’m a front-end developer and designer with over a decade of professional experience ranging from small, digital agencies to big software companies.`}</span>
             <br/><br/>
             <span>📍 Southampton, UK</span>
           </p>
         </div>
-        <p className="section__description bigger-font-size">{`Over the past few years, I’ve been focusing on Shopify since becoming a theme partner, with my first theme accepted into the`} <Link href="https://themes.shopify.com/designers/ewa-szymanska" target="_blank">official Shopify Theme Store</Link>.</p>
+        <p className="section__description bigger-font-size">{`In recent years, my work has centered around Shopify. I now design and build premium themes for the `}<Link href="https://themes.shopify.com/designers/ecomnoon" target="_blank">official Shopify Theme Store</Link> {`and help clients with all aspects of their Shopify stores.`}</p>
       </Section>
       <Section
         id="big-brands"
@@ -312,7 +312,14 @@ export default function Home() {
         heading="Testimonials"
         theme="grey"
       >
-        <div className='grid-3'>
+        <div className='grid-2'>
+          <div className='tile'>
+            <p>{`"Ewa was a huge help to us in implementing and designing complex Shopify sections. She's very fast, professional, and solution-oriented – highly recommended. Thank you, Ewa!"`}</p>
+            <br/>
+            <span className='mono'>Noel Hekking - Founder</span>
+            <br/>
+            <a href="https://soberciety.de/" target="_blank">soberciety.de</a>
+          </div>
           <div className='tile'>
             <p>{`"Ewa has joined our team for one of our biggest e-commerce builds to date. She is highly professional when it comes to proactivity, communication and importantly always delivering on time. Ewa is clearly experienced, with deep knowledge of Shopify’s architecture and she is able to lift the platforms capabilities to create great new value. During the project, she is very responsive, takes on feedback positively, and is eager to learn and push herself to grow."`}</p>
             <br/>

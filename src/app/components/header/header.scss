@@ -3,47 +3,54 @@
 .main-nav {
   background-color: $foreground-color;
 
-  ul {
+  &>ul {
     display: flex;
+    justify-content: space-between;
     padding: 0 $spacing;
     margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: $foreground-color;
+    z-index: 2;
+  }
+
+  @media #{$mobile} {
+    justify-content: center;
+  }
+
+  @media #{$desktop} {
+    justify-content: space-between;
+  }
+
+  li {
+    list-style-type: none;
+    padding: $spacing;
+
+    a {
+      color: $background-color;
+      text-decoration-color: transparent;
+      text-underline-offset: 3px;
+
+      &:hover {
+        text-decoration-color: $background-color;
+      }
+    }
+  }
+
+  div {
+    gap: 1rem;
 
     @media #{$mobile} {
-      justify-content: center;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
     }
 
     @media #{$desktop} {
-      justify-content: space-between;
-    }
-
-    li {
-      list-style-type: none;
-      padding: $spacing;
-
-      a {
-        color: $background-color;
-        text-decoration-color: transparent;
-        text-underline-offset: 3px;
-
-        &:hover {
-          text-decoration-color: $background-color;
-        }
-      }
-    }
-
-    div {
-      gap: 1rem;
-
-      @media #{$mobile} {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-      }
-
-      @media #{$desktop} {
-        display: grid;
-        grid-auto-flow: column;
-      }
+      display: grid;
+      grid-auto-flow: column;
     }
   }
 }

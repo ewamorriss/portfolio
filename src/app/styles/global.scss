@@ -90,6 +90,12 @@ iframe {
   }
 }
 
+@media #{$desktop} {
+  .mobile-only {
+    display: none !important;
+  }
+}
+
 .animate {
   opacity: 0;
   transform: translateY(1rem);
