@@ -1,0 +1,17 @@
+<!--
+  Netlify only detects forms in static HTML at build time, so it never sees the
+  React form. This file declares the fields; the component POSTs here.
+-->
+<html>
+  <head></head>
+  <body>
+    <form name="Contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="Contact" />
+      <input type="hidden" name="url" />
+      <input name="bot-field" />
+      <input required name="Name" type="text" />
+      <input required name="Email" type="email" />
+      <textarea required name="Message"></textarea>
+    </form>
+  </body>
+</html>

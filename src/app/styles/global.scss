@@ -195,12 +195,3 @@ iframe {
   }
 }
 
-#demo-stores,
-#ecom-noon,
-#dot-studio {
-  @media #{$desktop} {
-    img {
-      width: 80vw;
-    }
-  }
-}

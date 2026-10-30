@@ -3,7 +3,6 @@ import Image from 'next/image'
 import Footer from './components/footer/footer';
 import Header from './components/header/header';
 import Section from './components/section/section';
-import Button from './components/button/button';
 import Link from 'next/link';
 
 export default function Home() {
@@ -16,7 +15,7 @@ export default function Home() {
       >
         <div>
           <p className="section__description">
-            <span>{`I’m a front-end developer and designer with over a decade of professional experience ranging from small, digital agencies to big software companies.`}</span>
+            <span>{`I’m a front-end developer and designer with a degree in software engineering and over a decade of professional experience ranging from small, digital agencies to big software companies.`}</span>
             <br/><br/>
             <span>📍 Southampton, UK</span>
           </p>
@@ -34,13 +33,120 @@ export default function Home() {
       >
       </Section>
       <Section
+        id="takeout"
+        layout="1-2"
+        type="work"
+        subheading="Featured work"
+        heading="Takeout"
+        description="A Shopify theme for restaurants, takeout spots, and local places selling for pickup — with store hours, menus, and online ordering handled in one place. Fully designed and developed by me."
+        button={{
+          text: 'View on Shopify Theme Store',
+          href: 'https://themes.shopify.com/themes/takeout/presets/takeout'
+        }}
+        theme="grey"
+      >
+        <a href="https://macho-nacho-demo.myshopify.com/" target="_blank">
+          <Image
+            src="/macho-nacho.png"
+            width={2000}
+            height={1128}
+            alt="Takeout theme preview"
+          />
+        </a>
+      </Section>
+      <Section
+        id="orchid"
+        layout="1-2"
+        type="work"
+        subheading="Featured work"
+        heading="Orchid"
+        description="A Shopify theme for florists, plant shops, and anything too delicate to ship — with opening hours and in-store pickup built in. Fully designed and developed by me."
+        button={{
+          text: 'View on Shopify Theme Store',
+          href: 'https://themes.shopify.com/themes/takeout/presets/orchid'
+        }}
+      >
+        <a href="https://orchid-demo-store.myshopify.com/" target="_blank">
+          <Image
+            src="/orchid.png"
+            width={2000}
+            height={1128}
+            alt="Orchid theme preview"
+          />
+        </a>
+      </Section>
+      <Section
+        id="crumbs"
+        layout="1-2"
+        type="work"
+        subheading="Featured work"
+        heading="Crumbs"
+        description="A charming, flexible Shopify theme for cafés, artisan bakeries, and independent food sellers — where every detail of the design reflects the care you put into your products. Fully designed and developed by me."
+        button={{
+          text: 'View on Shopify Theme Store',
+          href: 'https://themes.shopify.com/themes/takeout/presets/crumbs'
+        }}
+        theme="grey"
+      >
+        <a href="https://crumbs-demo.myshopify.com/" target="_blank">
+          <Image
+            src="/crumbs.png"
+            width={2000}
+            height={1128}
+            alt="Crumbs theme preview"
+          />
+        </a>
+      </Section>
+      <Section
+        id="pantry"
+        layout="1-2"
+        type="work"
+        subheading="Featured work"
+        heading="Pantry"
+        description="A friendly, flexible Shopify theme for vegan restaurants and plant-based food stores — built to make dietary labels, ingredient transparency, and allergen information easy to display and browse. Fully designed and developed by me."
+        button={{
+          text: 'View on Shopify Theme Store',
+          href: 'https://themes.shopify.com/themes/takeout/presets/pantry'
+        }}
+      >
+        <a href="https://naughty-vegan-demo.myshopify.com/" target="_blank">
+          <Image
+            src="/naughty-vegan.png"
+            width={2000}
+            height={1128}
+            alt="Pantry theme preview"
+          />
+        </a>
+      </Section>
+      <Section
+        id="potion"
+        layout="1-2"
+        type="work"
+        subheading="Featured work"
+        heading="Potion"
+        description="A clean, flexible Shopify theme for skincare, beauty, and wellness stores — designed to present products clearly and give customers the ingredient transparency and browsing confidence to buy. Fully designed and developed by me."
+        button={{
+          text: 'View on Shopify Theme Store',
+          href: 'https://themes.shopify.com/themes/takeout/presets/potion'
+        }}
+        theme="grey"
+      >
+        <a href="https://potion-demo.myshopify.com/" target="_blank">
+          <Image
+            src="/potion.png"
+            width={2000}
+            height={1128}
+            alt="Potion theme preview"
+          />
+        </a>
+      </Section>
+      <Section
         id="no-plans"
         layout="1-2"
         type="work"
         subheading="Featured work &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Shopify Plus"
         heading="About:Blank"
         description="A Shopify Plus store I’ve worked on in collaboration with No Plans. My job was to convert Figma designs into a Shopify theme."
-        theme="grey"
         button={{
           text: 'Visit website',
           href: 'https://about---blank.com/'
@@ -56,123 +162,40 @@ export default function Home() {
         </a>
       </Section>
       <Section
-        id="takeout"
-        layout="1-2"
-        subheading="Featured work"
-        heading="Takeout"
-        description="A Shopify theme for physical businesses ready to scale online. Originally designed for restaurants and food sellers, it now supports a broad range of merchants. Fully designed and developed by me."
-        type="work"
-        button={{
-          text: 'View on Shopify Theme Store',
-          href: 'https://themes.shopify.com/themes/takeout/'
-        }}
-      >
-        <ul>
-          <li>
-            <a href="https://themes.shopify.com/themes/takeout/" target="_blank">
-              <Image
-                src="/takeout.png"
-                width={1248}
-                height={704}
-                alt="Takeout preview"
-              />
-            </a>
-          </li>
-        </ul>
-      </Section>
-      <Section
-        id="demo-stores"
+        id="shopify-stores"
         layout="1-1"
         type="work"
         subheading="Featured work"
         heading="Shopify Stores"
-        description="Demo stores for Takeout theme. Fully designed and developed by me. "
+        description="Stores I’ve worked on directly with the founders — from new features and conversion work to a full design and build."
         theme="grey"
       >
         <ul>
           <li>
-            <a href="https://macho-nacho-demo.myshopify.com/" target="_blank">
+            <a href="https://fjordreview.com/" target="_blank">
               <Image
-                src="/macho-nacho.png"
+                src="/fjord-review.png"
                 width={2000}
                 height={1128}
-                alt="Macho Nacho preview"
+                alt="Fjord Review preview"
               />
             </a>
-            <h3>Macho Nacho</h3>
-            <a href="https://macho-nacho-demo.myshopify.com/" target="_blank">Visit website</a>
+            <h3>Fjord Review</h3>
+            <p>Feature development &amp; CRO</p>
+            <a href="https://fjordreview.com/" target="_blank">Visit website</a>
           </li>
           <li>
-            <a href="https://potion-demo.myshopify.com/" target="_blank">
+            <a href="https://geniestix.com/" target="_blank">
               <Image
-                src="/potion.png"
+                src="/genie-stix.png"
                 width={2000}
                 height={1128}
-                alt="Potion preview"
+                alt="Genie Stix preview"
               />
             </a>
-            <h3>Potion</h3>
-            <a href="https://potion-demo.myshopify.com/" target="_blank">Visit website</a>
-          </li>
-          <li>
-            <a href="https://naughty-vegan-demo.myshopify.com/" target="_blank">
-              <Image
-                src="/naughty-vegan.png"
-                width={2000}
-                height={1128}
-                alt="Naughty Vegan preview"
-              />
-            </a>
-            <h3>Naughty Vegan</h3>
-            <a href="https://naughty-vegan-demo.myshopify.com/" target="_blank">Visit website</a>
-          </li>
-          <li>
-            <a href="https://crumbs-demo.myshopify.com/" target="_blank">
-              <Image
-                src="/crumbs.png"
-                width={2000}
-                height={1128}
-                alt="Crumbs preview"
-              />
-            </a>
-            <h3>Crumbs</h3>
-            <a href="https://crumbs-demo.myshopify.com/" target="_blank">Visit website</a>
-          </li>
-          <li>
-            <a href="https://orchid-demo-store.myshopify.com/" target="_blank">
-              <Image
-                src="/orchid.png"
-                width={2000}
-                height={1128}
-                alt="Orchid preview"
-              />
-            </a>
-            <h3>Orchid</h3>
-            <a href="https://orchid-demo-store.myshopify.com/" target="_blank">Visit website</a>
-          </li>
-          <li>
-            <a href="https://casa-italiana-demo.myshopify.com/" target="_blank">
-              <Image
-                src="/casa-italiana.png"
-                width={2000}
-                height={1128}
-                alt="Casa Italiana preview"
-              />
-            </a>
-            <h3>Casa Italiana</h3>
-            <a href="https://casa-italiana-demo.myshopify.com/" target="_blank">Visit website</a>
-          </li>
-          <li>
-            <a href="https://wasabi-demo.myshopify.com/" target="_blank">
-              <Image
-                src="/wasabi.png"
-                width={2000}
-                height={1128}
-                alt="Wasabi preview"
-              />
-            </a>
-            <h3>Wasabi</h3>
-            <a href="https://wasabi-demo.myshopify.com/" target="_blank">Visit website</a>
+            <h3>Genie Stix</h3>
+            <p>Shopify store design &amp; build</p>
+            <a href="https://geniestix.com/" target="_blank">Visit website</a>
           </li>
         </ul>
       </Section>
@@ -207,63 +230,6 @@ export default function Home() {
             <a href="https://mozzocoffee.com/" target="_blank">Visit website</a>
           </li>
         </ul>
-      </Section>
-      <Section
-        id="ecom-noon"
-        layout="1-2"
-        type="work"
-        subheading="Featured work"
-        heading="Ecom Noon"
-        description="A Next.js website I designed and developed for Ecom Noon."
-        button={{
-          text: 'Visit Website',
-          hoverText: 'ecomnoon.com',
-          href: 'https://ecomnoon.com/'
-        }}
-        theme="grey"
-      >
-        <a href="https://ecomnoon.com/" target="_blank">
-          <Image
-            src="/ecomnoon.png"
-            width={1248}
-            height={704}
-            alt="Ecom Noon preview"
-          />
-        </a>
-      </Section>
-      <Section
-        id="dot-studio"
-        layout="1-2"
-        type="work"
-        subheading="Featured work"
-        heading="Dot Studio"
-        description="A Next.js website I designed and developed for Dot Studio."
-        button={{
-          text: 'Visit Website',
-          hoverText: 'dotstudio.uk',
-          href: 'https://dotstudio.uk/'
-        }}
-      >
-        <a href="https://dotstudio.uk/" target="_blank">
-          <Image
-            src="/dotstudio.png"
-            width={1248}
-            height={704}
-            alt="Dot Studio preview"
-          />
-        </a>
-      </Section>
-      <Section
-        id="dot-studio"
-        type="work"
-      >
-        <div>
-          <h3>Component Library</h3>
-          <p className="section__description"></p>
-          <Button text="Visit Storybook" hoverText="dotstudio.uk/storybook" href="https://dotstudio.uk/storybook" />
-          <br/><br/><br/><br/>
-        </div>
-        <iframe src="https://dotstudio.uk/storybook/"></iframe>
       </Section>
       <Section
         id="wordpress"

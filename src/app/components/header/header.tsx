@@ -1,6 +1,7 @@
 'use client';
 import '@/app/components/header/header.scss';
 import Section from '../section/section';
+import ContactModal from '../contact-modal/contact-modal';
 
 export default function Header() {
   return (
@@ -10,9 +11,9 @@ export default function Header() {
           <div>
             <li><a href="https://www.linkedin.com/in/ewa-morriss-858828114/" target="_blank">LinkedIn</a></li>
             <li><a href="https://github.com/ewashh" target="_blank">GitHub</a></li>
-            <li className="mobile-only"><a href="mailto:ewafreelancer@gmail.com">Email</a></li>
+            <li className="mobile-only"><ContactModal /></li>
           </div>
-          <li className="desktop-only"><a href="mailto:ewafreelancer@gmail.com">ewafreelancer@gmail.com</a></li>
+          <li className="desktop-only"><ContactModal /></li>
         </ul>
       </nav>
       <Section

@@ -39,7 +39,8 @@
     }
   }
 
-  div {
+  // Child, not descendant: the contact modal renders inside a nav item.
+  &>ul>div {
     gap: 1rem;
 
     @media #{$mobile} {

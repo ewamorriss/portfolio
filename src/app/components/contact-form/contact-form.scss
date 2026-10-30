@@ -1,0 +1,95 @@
+@import './../../styles/vars.scss';
+@import './../button/button.scss';
+
+.contact-form {
+  display: grid;
+  gap: $spacing;
+  width: 100%;
+  max-width: 40rem;
+
+  @media #{$desktop} {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__field {
+    display: grid;
+    gap: calc($spacing * 0.35);
+
+    &--full {
+      @media #{$desktop} {
+        grid-column: 1 / -1;
+      }
+    }
+  }
+
+  label {
+    font-family: $mono-font-family;
+    text-transform: uppercase;
+    font-size: $small-font-size;
+  }
+
+  input,
+  textarea {
+    font-family: $body-font;
+    font-size: $regular-font-size;
+    color: inherit;
+    background-color: transparent;
+    border: $input-border-width solid $input-border-color;
+    border-radius: $input-border-radius;
+    padding: calc($spacing * 0.6) calc($spacing * 0.75);
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color .3s ease-in-out;
+
+    &::placeholder {
+      color: rgba($dark, 0.4);
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $violet;
+    }
+  }
+
+  textarea {
+    resize: vertical;
+  }
+
+  .button {
+    grid-column: 1 / -1;
+    justify-self: start;
+  }
+
+  &__message {
+    grid-column: 1 / -1;
+    margin: 0;
+    font-size: $small-font-size;
+  }
+
+  // Netlify spam trap — present for bots, gone for everyone else.
+  &__honeypot {
+    position: absolute;
+    left: -9999px;
+    margin: 0;
+  }
+
+  &.theme--dark {
+    label {
+      color: $background-color;
+    }
+
+    input,
+    textarea {
+      border-color: rgba($background-color, 0.3);
+      color: $background-color;
+
+      &::placeholder {
+        color: rgba($background-color, 0.4);
+      }
+    }
+
+    .button--primary {
+      color: $dark;
+    }
+  }
+}
