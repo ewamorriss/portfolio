@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import '@/app/styles/global.scss';
 import Section from '../components/section/section';
+import AdsConversion from '../components/conversion/ads-conversion';
+import { CONTACT_FORM_SEND_TO } from '@/app/lib/google-ads';
 
 export const metadata: Metadata = {
   title: 'Thanks — Ewa Morriss',
@@ -12,6 +14,7 @@ export const metadata: Metadata = {
 export default function ThankYou() {
   return (
     <main className="thank-you">
+      <AdsConversion sendTo={CONTACT_FORM_SEND_TO} />
       <Section
         id="thank-you"
         theme="dark"

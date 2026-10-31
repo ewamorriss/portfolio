@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "@/app/styles/global.scss";
 import { GoogleAnalytics } from '@next/third-parties/google'
+import Script from 'next/script'
+import { ADS_CONVERSION_ID } from '@/app/lib/google-ads'
 
 export const metadata: Metadata = {
   title: "Ewa Morriss",
@@ -22,6 +24,11 @@ export default function RootLayout({
       </head>
       <body>{children}</body>
       <GoogleAnalytics gaId="G-7SB8P32Z7X" />
+      {/* Adds Google Ads as a second destination on the tag GoogleAnalytics
+          already loaded. Queued on dataLayer, so load order doesn't matter. */}
+      <Script id="google-ads-tag" strategy="afterInteractive">
+        {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('config','${ADS_CONVERSION_ID}');`}
+      </Script>
     </html>
   );
 }
