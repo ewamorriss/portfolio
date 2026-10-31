@@ -16,6 +16,12 @@
     column-gap: calc($spacing * 6);
   }
 
+  // Grid items default to min-width: auto, so any wide child pushes the
+  // whole section past the viewport instead of shrinking.
+  &>* {
+    min-width: 0;
+  }
+
   &.theme {
     &--dark {
       background-color: $foreground-color;

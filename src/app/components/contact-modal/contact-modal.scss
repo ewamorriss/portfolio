@@ -29,12 +29,21 @@
   height: 100%;
   color: $p-color;
 
+  @media #{$mobile} {
+    // dvh so the sheet still fills the screen once mobile browser chrome hides.
+    height: 100dvh;
+    max-height: 100dvh;
+    margin: 0;
+    overflow-y: auto;
+  }
+
   &::backdrop {
     background-color: rgba($dark, 0.6);
   }
 
   &__inner {
-    background-color: $background-color;
+    background-color: $foreground-color;
+    color: $background-color;
     border-radius: $border-radius;
     padding: calc($spacing * 2);
     margin: auto;
@@ -45,8 +54,23 @@
     top: 50%;
     transform: translateY(-50%);
 
+    // Full-screen sheet rather than a centred card: the form is tall enough
+    // that a card leaves no usable margin anyway.
     @media #{$mobile} {
       padding: calc($spacing * 1.5);
+      border-radius: 0;
+      max-width: none;
+      min-height: 100%;
+      top: 0;
+      transform: none;
+      display: flex;
+      flex-direction: column;
+
+      // Header stays pinned at the top; the form takes the spare height and
+      // centres itself in it.
+      .contact-form {
+        margin-block: auto;
+      }
     }
   }
 
@@ -73,7 +97,7 @@
     padding: calc($spacing * 0.25);
     font-size: $regular-font-size;
     font-family: $mono-font-family;
-    color: $font-color;
+    color: $background-color;
     cursor: pointer;
     line-height: 1;
   }

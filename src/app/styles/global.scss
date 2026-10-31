@@ -195,3 +195,22 @@ iframe {
   }
 }
 
+.thank-you {
+  display: flex;
+  min-height: 100vh;
+
+  .section {
+    flex: 1;
+    align-content: center;
+  }
+
+  // The homepage h1 is the hero size; this one sits above body copy.
+  h1 {
+    font-size: $x-large-font-size;
+
+    @media #{$mobile} {
+      font-size: $mobile-x-large-font-size;
+    }
+  }
+}
+

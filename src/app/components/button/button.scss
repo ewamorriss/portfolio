@@ -29,6 +29,12 @@
   font-family: $mono-font-family;
   min-width: $spacing * 10;
   white-space: nowrap;
+
+  // Long labels can't fit one line on narrow screens, and nowrap min-content
+  // then forces the whole section wider than the viewport.
+  @media #{$mobile} {
+    white-space: normal;
+  }
   transition: background-color .5s ease-in-out,
     border-color .5s ease-in-out,
     color .5s ease-in-out,

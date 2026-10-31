@@ -1,6 +1,7 @@
 'use client';
 import '@/app/components/contact-form/contact-form.scss';
 import { FormEvent, useId, useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 type ContactFormProps = {
   theme?: 'light' | 'dark';
@@ -11,6 +12,7 @@ export default function ContactForm({ theme = 'light', classes }: ContactFormPro
   const [status, setStatus] = useState<'sending' | 'success' | 'error' | null>(null);
   // The form renders more than once per page (nav modal + footer), so ids can't be fixed.
   const id = useId();
+  const router = useRouter();
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -30,7 +32,15 @@ export default function ContactForm({ theme = 'light', classes }: ContactFormPro
         body: new URLSearchParams(fields).toString(),
       });
 
-      setStatus(response.ok ? 'success' : 'error');
+      if (!response.ok) {
+        setStatus('error');
+        return;
+      }
+
+      // /thank-you is the Google Ads conversion trigger, so the redirect has to
+      // happen on every successful submit, modal included.
+      setStatus('success');
+      router.push('/thank-you');
     } catch (error) {
       setStatus('error');
       console.error('Error submitting contact form:', error);

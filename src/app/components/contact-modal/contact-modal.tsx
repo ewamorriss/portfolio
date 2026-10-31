@@ -60,7 +60,7 @@ export default function ContactModal({ text = 'Contact', classes }: ContactModal
               ✕
             </button>
           </header>
-          <ContactForm />
+          <ContactForm theme="dark" />
         </div>
       </dialog>
     </>
