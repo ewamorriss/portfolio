@@ -39,17 +39,5 @@
         text-decoration-color: $background-color;
       }
     }
-
-    div {
-      display: flex;
-      column-gap: 1em;
-      flex-wrap: wrap;
-    }
-  }
-
-  .mobile-block {
-    @media #{$mobile} {
-      flex: 0 0 100%;
-    }
   }
 }

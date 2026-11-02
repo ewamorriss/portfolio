@@ -48,17 +48,19 @@ export default function ContactModal({ text = 'Contact', classes }: ContactModal
           if (event.target === dialogRef.current) setIsOpen(false);
         }}
       >
+        {/* Sibling of the inner column, not inside it, so it can sit in the
+            corner of the screen rather than the corner of the content. */}
+        <button
+          type="button"
+          className="contact-modal__close"
+          onClick={() => setIsOpen(false)}
+          aria-label="Close contact form"
+        >
+          ✕
+        </button>
         <div className="contact-modal__inner">
           <header className="contact-modal__header">
             <h2 id={headingId} className="contact-modal__heading">Get in touch</h2>
-            <button
-              type="button"
-              className="contact-modal__close"
-              onClick={() => setIsOpen(false)}
-              aria-label="Close contact form"
-            >
-              ✕
-            </button>
           </header>
           <ContactForm theme="dark" />
         </div>
